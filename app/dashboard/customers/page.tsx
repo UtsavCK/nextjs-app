@@ -13,8 +13,7 @@ export default async function Page({
     query?: string;
   };
 }) {
-  const searchParams1 = await searchParams;
-  const query = searchParams1?.query || "";
+  const query = searchParams?.query || "";
   const customers = await fetchFilteredCustomers(query);
 
   return (
